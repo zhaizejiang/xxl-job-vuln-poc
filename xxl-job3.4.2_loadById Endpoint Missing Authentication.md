@@ -1,7 +1,3 @@
-#xxl-job v3.4.2 Access Control Bypass via /jobgroup/loadById
-
----
-
 ## Title
 
 **xxl-job 3.4.2 JobGroupController loadById Endpoint Missing Authentication**
