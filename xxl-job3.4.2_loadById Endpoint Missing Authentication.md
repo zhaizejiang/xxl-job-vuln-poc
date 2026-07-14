@@ -92,6 +92,9 @@ userName=test&password=test&ifRemember=on
 {"code":200,"data":null,"msg":"Success","success":true}
 ```
 
+<img width="1526" height="310" alt="图片" src="https://github.com/user-attachments/assets/967975b9-e4c4-47cc-b9ef-2248be0cb2fb" />
+
+
 **Extract Cookie**: `xxl_job_login_token=<session_token>`
 
 ### Step 2: Access /jobgroup/loadById
@@ -119,6 +122,7 @@ Cookie: xxl_job_login_token=<session_token>
   "success": true
 }
 ```
+<img width="1310" height="456" alt="图片" src="https://github.com/user-attachments/assets/0bad3883-b98b-4f35-8301-86a4c86cdf26" />
 
 **Verified on**: http://10.48.46.252:8080/ (v3.4.2)
 **User**: test/test (role=0, normal user)
